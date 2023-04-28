@@ -1,5 +1,5 @@
 module ICU4C {
   header "umbrella.h"
-  link "icucore"
+  link "icuuc"
   export *
 }
