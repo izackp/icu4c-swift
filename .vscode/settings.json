@@ -1,0 +1,11 @@
+{
+    "lldb.library": "C:\\Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin\\liblldb.dll",
+    "lldb.verboseLogging": true,
+    "sourcekit-lsp.serverArguments": [
+    ],
+    "swift.buildArguments": [
+        "-Xlinker",
+        "-debug:dwarf"
+    ],
+    "swift.diagnostics": true
+}

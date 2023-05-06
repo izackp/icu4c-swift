@@ -10,7 +10,8 @@
             "program": "${workspaceFolder:icu4c-swift}\\.build/debug/Demo",
             "args": [],
             "cwd": "${workspaceFolder:icu4c-swift}",
-            "preLaunchTask": "swift: Build Debug Demo"
+            "preLaunchTask": "swift: Build Debug Demo",
+            "console": "internalConsole"
         },
         {
             "type": "lldb",
@@ -22,7 +23,8 @@
             "program": "${workspaceFolder:icu4c-swift}\\.build/release/Demo",
             "args": [],
             "cwd": "${workspaceFolder:icu4c-swift}",
-            "preLaunchTask": "swift: Build Release Demo"
+            "preLaunchTask": "swift: Build Release Demo",
+            "console": "internalConsole"
         }
     ]
 }

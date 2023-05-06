@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.8
 
 import PackageDescription
 
@@ -7,12 +7,22 @@ let package = Package(
     products: [
         .library(
             name: "ICU4C", targets: ["ICU4C"]),
+        .library(
+            name: "ICU4CMac", targets: ["ICU4C"]),
         .executable(
             name: "Demo",
             targets: ["Demo"])],
     targets: [
         .systemLibrary(
             name: "ICU4C",
+            pkgConfig: "icu-uc",
+            providers: [
+                .brew(["icu4c"]),
+                .apt(["libicu-dev"])
+            ]
+        ),
+        .systemLibrary(
+            name: "ICU4CMac",
             pkgConfig: "icu-uc",
             providers: [
                 .brew(["icu4c"]),
