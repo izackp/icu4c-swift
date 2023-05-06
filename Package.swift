@@ -22,16 +22,11 @@ let package = Package(
             ]
         ),
         .systemLibrary(
-            name: "ICU4CMac",
-            pkgConfig: "icu-uc",
-            providers: [
-                .brew(["icu4c"]),
-                .apt(["libicu-dev"])
-            ]
+            name: "ICU4CMac"
         ),
         .target(
             name: "Demo",
-            dependencies: ["ICU4C"]),
+            dependencies: ["ICU4CMac"]),
 
     ],
     swiftLanguageVersions: [.v5]
