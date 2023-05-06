@@ -8,7 +8,7 @@ let package = Package(
         .library(
             name: "ICU4C", targets: ["ICU4C"]),
         .library(
-            name: "ICU4CMac", targets: ["ICU4C"]),
+            name: "ICU4CMac", targets: ["ICU4CMac"]),
         .executable(
             name: "Demo",
             targets: ["Demo"])],
@@ -22,7 +22,12 @@ let package = Package(
             ]
         ),
         .systemLibrary(
-            name: "ICU4CMac"
+            name: "ICU4CMac",
+            pkgConfig: "icu-uc",
+            providers: [
+                .brew(["icu4c"]),
+                .apt(["libicu-dev"])
+            ]
         ),
         .target(
             name: "Demo",
